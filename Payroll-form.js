@@ -32,6 +32,19 @@ const save = () => {
         return;
     }
 }
+const resetForm=()=>{
+    setValue('#name','');
+    unsetSelectedValues('[name=profile]');
+    unsetSelectedValues('[name=gender]');
+    unsetSelectedValues('[name=department]');
+    setValue('#salary','');
+    setValue('#note','');
+    setValue('#day','1');
+    setValue('#month','January');
+    setValue('#year','2020');
+
+    
+}
 const createEmployeeData = () => {
     let employeeData = new EmployeeData();
     try{
@@ -77,4 +90,18 @@ const getSelectedValues =(propertyValue)=>{
 const getInputValueById =(id) =>{
     let value = document.querySelector(id).value;
     return value;
+}
+const unsetSelectedValues=(propertyValue)=>{
+    let allItems=document.querySelectorAll(propertyValue);
+    allItems.forEach(item=>{
+        item.checked =false;
+    })
+}
+const setTextValue=(id,value)=>{
+    const element = document.querySelector(id);
+    element.textContent=value;
+}
+const setValue=(id,value)=>{
+    const element = document.querySelector(id);
+    element.value=value;
 }
