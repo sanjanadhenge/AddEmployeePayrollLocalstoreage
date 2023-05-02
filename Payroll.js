@@ -7,7 +7,15 @@ class EmployeeData{
     }
     get name(){ return this._name}
     set name(name){
-            this._name=name;
+    let Name_Reg=RegExp('^[A-Z]{1}[a-z]{2,}');
+            if(Name_Reg.test(name))
+            {
+                this._name=name;
+            }
+            else
+            {
+                throw 'Name is incorrect !';
+            }
     }
     get profilePic(){return this._profilePic }
     set profilePic(profilePic){
@@ -36,7 +44,13 @@ class EmployeeData{
     }
     get startdate(){ return this._startdate}
     set startdate(startdate){
+        let ms = Date.now();
+        if(startdate<=ms)
+        {
             this._startdate=startdate;
+        }
+        else throw 'Date is Incorrect !';
+       
     }
    
     tostring()
