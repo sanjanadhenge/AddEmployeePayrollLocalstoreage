@@ -1,3 +1,4 @@
+//UC1
 class EmployeeData{
 
     get id(){ return this._id}
