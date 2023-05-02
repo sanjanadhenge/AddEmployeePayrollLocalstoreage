@@ -20,7 +20,7 @@
             </div>
       </header>
     <div id="formId" class="form-content">
-        <form class="form" action="#"onreset="resetform()" onsubmit="save()">
+        <form class="form" action="#"onreset="resetForm()" onsubmit="save()">
              <!----UC2-->
     <div class="form-head">Employee Payroll form</div>
     <div class="row-content">
@@ -73,7 +73,7 @@
             <input class="checkbox"type="checkbox" id="finance"name="finance" value="Finance">
             <lable class="text" for="finance">Finance</lable>
             <input class="checkbox"type="checkbox" id="engineer"name="engineer" value="Engineer">
-            <lable class="text" for="engineer">HR</lable>
+            <lable class="text" for="engineer">Engineer</lable>
             <input class="checkbox"type="checkbox" id="other"name="other" value="Other">
             <lable class="text" for="other">Other</lable>
         </div>
@@ -143,7 +143,6 @@
                 <option value="2017">2017</option>
                 <option value="2016">2016</option>
             </select>
-            <error-output class="text-error"for="text"></error-output>
         </div>
     </div>
     <div class="row-content">
@@ -151,7 +150,7 @@
         <textarea id="notes" class="input" name="Notes" placeholder="" style="height: 100px"></textarea>
     </div>
     <div class="button-content">
-        <a href="./home.html" class="reserButton button cancelButton">Cancel</a>
+        <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
         <div class="Submit-reset">
             <button type="submit" class="button submitButton" id="submitButton">Sumbit</button>
             <button type="reset" class="button resetButton">Reset</button>
